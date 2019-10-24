@@ -1,6 +1,9 @@
 import express from 'express';
 import routes from './routes';
 
+/** Importa a conexão com o banco */
+import './database';
+
 /**
  * Classe que instância nossa aplicação.
  */
