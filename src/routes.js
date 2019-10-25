@@ -18,5 +18,4 @@ routes.use(authToken);
 /** Rota para listar todos os usuários */
 routes.get('/users', UserController.index);
 
-/** Exportação das rotas para uso do nosso app. */
 export default routes;

@@ -5,7 +5,7 @@ import authConfig from '../../config/auth';
  * Middleware que faz a autenticação do token do usuário.
  */
 export default async (req, res, next) => {
-  /** Receber o token enviado no header da requisição   */
+  /** Receber o token enviado no header da requisição. */
   const authHeader = req.headers.authorization;
 
   /** Verifica se o Token existe */

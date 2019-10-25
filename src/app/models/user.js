@@ -1,16 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcryptjs';
 
-/**
- * Model de usuário(user) para realizar a manipulação dos dados na tabela
- *  do banco de dados
- */
 class User extends Model {
-  /**
-   * @Method init
-   * inicia nosso model
-   * @param sequelize - conexão com o banco
-   */
   static init(sequelize) {
     /**
      * Descrição das colunas que serão usadas no front end do app.
@@ -37,9 +28,6 @@ class User extends Model {
     return this;
   }
 
-  /** Verificação de senha
-   * @param {string} password - senha digitada pelo usuário
-   */
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
