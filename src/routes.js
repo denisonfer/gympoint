@@ -6,6 +6,7 @@ import SessionController from './app/controllers/sessionController';
 import UserController from './app/controllers/userController';
 import FileController from './app/controllers/fileController';
 import StudentController from './app/controllers/studentController';
+import PlanController from './app/controllers/planController';
 
 import authToken from './app/middlewares/authToken';
 
@@ -30,6 +31,12 @@ routes.delete('/users', UserController.delete);
 routes.get('/students', StudentController.index);
 routes.post('/students', StudentController.store);
 routes.put('/students/:id', StudentController.update);
+
+/** Rotas para Planos de matrícula */
+routes.get('/plans', PlanController.index);
+routes.post('/plans', PlanController.store);
+routes.put('/plans/:id', PlanController.update);
+routes.delete('/plans/:id', PlanController.delete);
 
 /** Rota para fazer upload de imagem */
 routes.post('/files', upload.single('file'), FileController.store);
