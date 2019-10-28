@@ -4,8 +4,9 @@ import databaseConfig from '../config/database';
 
 import User from '../app/models/user';
 import File from '../app/models/file';
+import Student from '../app/models/students';
 
-const models = [User, File];
+const models = [User, File, Student];
 
 /**
  * Classe que instancia a conexão com o banco de dados PostgresSQL
