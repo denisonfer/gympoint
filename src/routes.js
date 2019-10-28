@@ -8,6 +8,7 @@ import FileController from './app/controllers/fileController';
 import StudentController from './app/controllers/studentController';
 import PlanController from './app/controllers/planController';
 import MatriculationController from './app/controllers/matriculationController';
+import ChekinsController from './app/controllers/chekinsController';
 
 import authToken from './app/middlewares/authToken';
 
@@ -19,6 +20,10 @@ const upload = multer(multerConfig);
 routes.post('/users', UserController.store);
 /** Rota para criar a sessão */
 routes.post('/sessions', SessionController.store);
+
+/** Rotas para Chekins */
+routes.get('/students/:id/chekins', ChekinsController.index);
+routes.post('/students/:id/chekins', ChekinsController.store);
 
 /** Rota middleware de validação do token */
 routes.use(authToken);
