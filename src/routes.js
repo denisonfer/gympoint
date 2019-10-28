@@ -7,6 +7,7 @@ import UserController from './app/controllers/userController';
 import FileController from './app/controllers/fileController';
 import StudentController from './app/controllers/studentController';
 import PlanController from './app/controllers/planController';
+import MatriculationController from './app/controllers/matriculationController';
 
 import authToken from './app/middlewares/authToken';
 
@@ -37,6 +38,12 @@ routes.get('/plans', PlanController.index);
 routes.post('/plans', PlanController.store);
 routes.put('/plans/:id', PlanController.update);
 routes.delete('/plans/:id', PlanController.delete);
+
+/** Rotas para Matrícula */
+routes.get('/matriculations', MatriculationController.index);
+routes.post('/matriculations', MatriculationController.store);
+routes.put('/matriculations/:id', MatriculationController.update);
+routes.delete('/matriculations/:id', MatriculationController.delete);
 
 /** Rota para fazer upload de imagem */
 routes.post('/files', upload.single('file'), FileController.store);
