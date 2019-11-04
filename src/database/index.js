@@ -8,12 +8,19 @@ import Students from '../app/models/students';
 import Plans from '../app/models/plans';
 import Matriculation from '../app/models/matriculation';
 import Chekins from '../app/models/chekins';
+import Help_orders from '../app/models/help_orders';
 
-const models = [User, File, Students, Plans, Matriculation, Chekins];
+const models = [
+  User,
+  File,
+  Students,
+  Plans,
+  Matriculation,
+  Chekins,
+  Help_orders,
+];
 
-/**
- * Classe que instancia a conexão com o banco de dados PostgresSQL
- */
+/** Classe que instancia a conexão com o banco de dados PostgresSQL */
 class Database {
   constructor() {
     this.init();
